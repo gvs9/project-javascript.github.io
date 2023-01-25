@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+</head>
+<body>
+    <div id="main">
+    <h1 id="sub">Dom Manipulation and Navigation</h1>
+    <p id="pri"><span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        Repellendus officiis ratione aliquam delectus inventore earum.</span>
+    </p>
+    <h2>this is amazing</h2>
+        </div>
+         <button onclick="start()">Timer</button> 
+         <button onclick="stop()">stop</button>
+</body>
+
+<script>
+
+// const addnode=()=>{
+//     let node=document.createElement("div");
+//     console.log(node);
+//     let text=document.createTextNode("its so easy");
+
+//     node.appendChild(text);
+//     console.log(node);
+//     let main=document.getElementById("main");
+//     main.appendChild(node);
+// }
+// const magic=()=>{
+// let main=document.getElementById("main");
+// console.log(main);
+// console.log(main.firstElementChild.nodeName);
+
+// let first=main.firstElementChild;
+// console.log(first);
+
+// let last=main.lastElementChild;
+// console.log(last);
+// last.style.backgroundColor="#e2e2e2";
+// last.style.color="green";
+
+// let nodes=main.childNodes;
+
+// for(let n of nodes){
+//     console.log(n.nodeName);
+// }
+
+// let parent=main.parentNode;
+// console.log(parent.nodeName);
+
+// //sibling
+// let sub=document.getElementById("sub");
+
+// let next=sub.nextElementSibling;
+// console.log(next.nodeName);
+// }
+
+//delay timeout function
+const code=()=>{
+    console.log("Time function is good");
+}
+let pause;
+const start=()=>{
+//setTimeout(code,3000);
+pause=setInterval(code,2000);
+}
+
+const stop=()=>{
+    clearInterval(pause);
+}
+
+    </script>
+</html>
