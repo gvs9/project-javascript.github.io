@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+     
+    <link rel="stylesheet" href="style1.css">
+
+    <title>Resume Generator</title>
+
+</head>
+
+ 
+<body>
+
+    <div class="container" id="cv-form">
+   <h1 class="text-center my-2">Resume Generator</h1>
+   <p class="text-center">Simple Way To Make Resume</p>
+
+   <div class="row">
+
+    <div class="col-md-6">
+   
+        <h3>Personal Information</h3>
+   <div class="form-group mt-2">
+    <label for="namefield">Your Name</label>
+    <input
+    type="text"
+    id="namefield"
+    placeholder="Enter here"
+    class="form-control"
+   />
+   </div>
+   
+   <div class="form-group mt-2">
+    <label for="contactfield">Contact Number</label>
+    <input
+    type="text"
+    id="contactfield"
+    placeholder="Enter here"
+    class="form-control"
+   />
+   </div>
+
+   <div class="form-group mt-2">
+    <label for="emailfield">Email</label>
+    <input
+    type="text"
+    id="emailfield"
+    placeholder="Enter here"
+    class="form-control"
+   />
+   </div>
+
+   <!--image-->
+   <div class="form-group mt-3">
+    <label for="">Select Image</label>
+        <input id="imgfield" type="file" class="form-control"/>
+    
+
+   </div>
+
+<p class="text-secondary my-3 mt-2">Find Me Online</p>
+
+<div class="form-group mt-2">
+    <label for="linkfield">LinkedIn</label>
+    <input
+    type="text"
+    id="linkfield"
+    placeholder="Enter here"
+    class="form-control"
+   />
+   </div>
+
+   <div class="form-group mt-2">
+    <label for="gitfield">GitHub</label>
+    <input
+    type="text"
+    id="gitfield"
+    placeholder="Enter here"
+    class="form-control"
+   />
+   </div>
+
+   <div class="form-group mt-2">
+    <label for="leetfield">LeetCode</label>
+    <input
+    type="text"
+    id="leetfield"
+    placeholder="Enter here"
+    class="form-control"
+   />
+   </div>
+
+
+</div>
+
+<div class="col-md-6">
+
+<h3>Professional Information</h3>
+
+<div class="form-group mt-2">
+    <label for="">Summary</label>
+    <textarea
+    id="sumfield"
+    placeholder="Enter here"
+    class="form-control"
+></textarea>
+   </div>
+
+   <div class="form-group mt-3" id="we">
+    <label for="">Experience</label>
+    <textarea
+    
+    placeholder="Enter here"
+    class="form-control expfield"
+></textarea>
+
+<div class="container text-center mt-1" id="expAddButton">
+<button onclick="expField()"
+class="btn btn-primary btn-sm">Add</button>
+</div>
+   </div>
+
+   <div class="form-group mt-1" id="pr">
+    <label for="">Projects</label>
+    <textarea
+    
+    placeholder="Enter here"
+    class="form-control profield"
+></textarea>
+
+<div class="container text-center mt-1" id="proAddButton">
+<button onclick="proj()"
+ class="btn btn-primary btn-sm">Add</button>
+</div>
+   </div>
+
+   <div class="form-group mt-1" id="ed">
+    <label for="">Education</label>
+    <textarea
+    
+    placeholder="Enter here"
+    class="form-control edufield"
+></textarea>
+
+<div class="container text-center mt-1" id="eduAddButton">
+<button onclick="edu()"
+class="btn btn-primary btn-sm">Add</button>
+</div>
+   </div>
+    </div>
+
+   </div>
+   <div class="container text-center mt-4">
+    <button onclick="generate()"class="btn btn-primary btn-lg">Generate Resume</button>
+   </div>
+    </div>
+<!--CV TEMPLATE-->
+<div class="container" id="cv-template">
+
+<h1>Resume</h1>
+
+<div class="row">
+    <!--FIRST COLOUMN-->
+<div class="col-md-4 text-center py-5 background" >
+
+<img src="imagedefault.png"
+alt=""
+class="img-fluid myimg"
+id="imgtemplate"/>
+
+<!--Personal Details-->
+<div class="container">
+<p id="nameT">Gitesh  Sakharkar</p>
+<p id="contT">+91-8329509168</p>
+<p id="mailT">sakharkargitesh9@gmail.com</p>
+<hr/>
+<!--Link1 -->
+<p>
+    <a id="linkT"href="https://www.linkedin.com">LinkedIn</a>
+</p>
+<!--Link2 -->
+<p>
+    <a id="gitT"href="https://github.com">GitHub</a>
+</p>
+
+
+<!--Link3-->
+<p>
+    <a id="leetT"href=" https://leetcode.com">LeetCode</a>
+</p>
+<hr/>
+
+</div>
+</div>
+
+<!--SECOND COLOUMN-->
+<div class="col-md-8 py-5">
+
+    <h1 id="nameT2" class="text-center" style="font-weight:980">Gitesh Sakharkar</h1>
+
+
+<!--SUMMARY CARD-->
+<div class="card mt-4">
+    <div class="card-header background">
+        <h3>Summarry</h3>
+    </div>
+
+
+<div class="card-body">
+    <p id="sumT">Learning Data Structure & Algorithm
+        and System Design in Scaler
+        Academy. A keen learner always
+        looking to grow my competency in
+        different technologies and master
+        new technologies.</p>
+</div>
+</div>
+<!--EXPERIENCE CARD-->
+<div class="card mt-4">
+    <div class="card-header background">
+        <h3>Experience</h3>
+    </div>
+
+
+<div class="card-body">
+ <ul id="expT">
+    
+        <p style="font-weight:500">Byju’s, Bengaluru— Business Development Trainee.</p>
+       <p class="text-secondary " >MAY 2021 – JULY 2021</p>
+       <li class=> Worked as Business Development Trainee where I was engaged in following up
+        the leads and converting them into sales.</li> 
+ <hr/>
+ 
+    <p style="font-weight:500" >VehiBuddy, Nanded — Chief Operations Officer.</p>
+    <p class="text-secondary" >DECEMBER 2017 - APRIL 2021</p>
+    <li> 3+ Years of experience working as a Chief Operations Officer for VehiBuddy.</li>
+    <li> Actively Involved in daily operational functions of the business.</li>
+    <li> I had the responsibility of designing and implementing business strategies,
+    plans and procedures.</li>
+    <li> Managed team size of 30+ and launched new initiatives that increases the
+    customer retention rate of the company by 20%. </li>
+ 
+</ul>
+</div>
+</div>
+
+<!--PROJECT CARD-->
+
+<div class="card mt-4">
+    <div class="card-header background">
+        <h3>Projects</h3>
+    </div>
+
+
+<div class="card-body">
+ <ul id="proT">
+    
+        <p style="font-weight:500">Built Netflix Landing Page Clone</p>
+       <p class="text-secondary " >TECH STACK-HTML, CSS, and JAVASCRIPT and Techniques like Grid, Flex,
+        Overlays, Shadows, etc. </p>
+       <li class=>Created Netflix Landing page using Html,Css and Javascript</li> 
+ <hr/>
+ 
+    <p style="font-weight:500" >Resume Generator</p>
+    <p class="text-secondary" >TECH STACK-HTML, CSS, and JAVASCRIPT </p>
+    <li> Created Resume Builder by using Html,Css and Javascript</li>
+   
+ 
+</ul>
+</div>
+</div>
+
+<!--Education Card-->
+<div class="card mt-4">
+    <div class="card-header background">
+        <h3>Education</h3>
+    </div>
+
+
+<div class="card-body">
+ <ul id="edT">
+    
+        <p style="font-weight:500">Scaler Academy-Masters In Computer Science</p>
+       <li class="text-secondary " >NOV 2021 – Ongoing</li>
+     
+ <hr/>
+ 
+    <p style="font-weight:500" >SRTM University-Mechanical Engineering</p>
+    <li class="text-secondary" >JULY  2013 - JUNE  2017</li>
+    
+ 
+</ul>
+</div>
+</div>
+
+<div class="container mt-3 text-center">
+    <button onclick="print()" class=" btn background">Print</button>
+
+</div>
+
+</div>
+</div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
